@@ -1,0 +1,20 @@
+.info {
+  color: $basic_white;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 160px;
+  padding-top: 250px;
+  padding-bottom: 390px;
+  width: 880px;
+}
+
+.info__header {
+  @include text(46px, 64px, 700);
+  letter-spacing: -0.005em;
+}
+
+.info__slogan {
+  @include text(20px, 32px, 300);
+  letter-spacing: -0.005em;
+  color: $light_grey;
+}

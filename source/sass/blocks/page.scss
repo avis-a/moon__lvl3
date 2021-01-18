@@ -1,0 +1,20 @@
+.page {
+  font-family: $main-font;
+  color: $basic_black;
+  background-color: $basic_white;
+  margin: 0;
+  background-image: url("../img/main-background-desktop.jpg");
+  background-repeat: no-repeat;
+  background-position: center 0;
+  background-size: 100% auto;
+  min-height: 825px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/main-background-desktop-2x.jpg");
+  }
+}
+
+.page__header {
+  min-height: 62px;
+  width: 880px;
+}

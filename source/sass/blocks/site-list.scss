@@ -1,0 +1,16 @@
+.site-list {
+  list-style: none;
+  border-bottom: 1px solid $grey;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 19px;
+  padding-right: 19px;
+  margin: 0;
+}
+
+.site-list__link {
+  @include text(16px, 32px, 300);
+  text-decoration: none;
+  color: $light_grey;
+}

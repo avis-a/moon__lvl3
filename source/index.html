@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>HTML Academy: Moon</title>
-  <link href="css/styles.min.css" rel="stylesheet">
+  <link href="css/style.min.css" type="text/css" rel="stylesheet">
   <link rel="preload" href="./fonts/opensans-bold-webfont.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="./fonts/opensans-light-webfont.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="./fonts/opensans-regular-webfont.woff2" as="font" type="font/woff2" crossorigin="anonymous">
@@ -17,7 +17,7 @@
   <header class="page__header container">
     <a class="page__logo" href="index.html">
       <svg width="68" height="21">
-        <use xlink:href="img/sprite.svg#logo"></use>
+        <use xlink:href="img/sprite.svg#icon-logo"></use>
       </svg>
     </a>
     <nav class="main-nav main-nav__closed main-nav__nojs">
@@ -44,27 +44,27 @@
   </header>
 
   <main class="page__main">
-    <section class="info">
+    <section class="info container">
       <div class="info__wrapper">
         <h1 class="info__header">Мы продаем велосипеды</h1>
         <p class="info__slogan">Наш магазин отбирает только самые лучшие велосипеды для продажи</p>
-        <form class="info__form form" action="https://echo.htmlacademy.ru/" method="POST">
-          <p class="form__text">Заполните поля ниже и мы подберем велосипед Вашей мечты</p>
-          <div class="form__wrapper">
-            <p class="form__row">
-              <label class="form__label" for="name"></label>
-              <input class="form__control" id="name" type="text" name="name" placeholder="Введите Ваше Имя">
-            </p>
-            <p class="form__row">
-              <label class="form__label" for="tel"></label>
-              <input class="form__control" id="tel" type="tel" name="tel" placeholder="Введите Ваш номер телефона"
-                required>
-            </p>
-          </div>
-          <button type="button" class="form__button button" aria-label="Подобрать велосипед мечты">Подобрать велосипед
-            мечты</button>
-        </form>
       </div>
+      <form class="info__form form" action="https://echo.htmlacademy.ru/" method="POST">
+        <p class="form__text">Заполните поля ниже и мы подберем велосипед Вашей мечты</p>
+        <div class="form__wrapper">
+          <p class="form__row">
+            <label class="form__label" for="name"></label>
+            <input class="form__control" id="name" type="text" name="name" placeholder="Введите Ваше Имя">
+          </p>
+          <p class="form__row">
+            <label class="form__label" for="tel"></label>
+            <input class="form__control" id="tel" type="tel" name="tel" placeholder="Введите Ваш номер телефона"
+              required>
+          </p>
+        </div>
+        <button type="button" class="form__button button" aria-label="Подобрать велосипед мечты">Подобрать велосипед
+          мечты</button>
+      </form>
     </section>
 
     <section class="about container" id="about">
@@ -140,6 +140,17 @@
       <div class="video__info">
         <h2 class="video__title">Видео про велосипеды</h2>
         <p class="video__description">В этом видео мы подробно расскажем про особенности выбора велосипеда для себя.</p>
+        <picture>
+          <source type="image/webp" media="(max-width: 1024px)"
+            srcset="./img/video-desktop.webp, ./img/video-desktop-2x.webp 2x">
+          <source type="image/webp" media="(max-width: 768px)"
+            srcset="./img/video-tablet.webp, ./img/video-tablet-2x.webp 2x">
+          <source type="image/webp" srcset="./img/video-mobile.webp, ./img/video-mobile-2x.webp 2x">
+          <source media="(max-width: 1024px)" srcset="./img/video-desktop.jpg, ./img/child-bike-desktop-2x.jpg 2x">
+          <source media="(max-width: 768px)" srcset="./img/video-tablet.jpg, ./img/video-tablet-2x.jpg 2x">
+          <img class="video__img" src="./img/video-desktop.jpg" srcset="./img/video-desktop-2x.jpg 2x"
+            alt="Видео о велосипедах">
+        </picture>
         <button class="video__button" type="button" aria-label="Воспроизвести видео"></button>
       </div>
     </section>
@@ -160,14 +171,14 @@
           <a class="contacts__link contacts__link--mail"
             href="mailto:puteshestviemechta@gmail.ru">puteshestviemechta@gmail.ru
             <svg class="contacts__img contacts__img--mail" width="26" height="20">
-              <use xlink:href="img/sprite.svg#mail"></use>
+              <use xlink:href="img/sprite.svg#icon-mail"></use>
             </svg>
           </a>
         </li>
         <li class="contacts__item">
           <a class="contacts__link contacts__link--tel" href="tel:+749978468446">+7 (499) -784-684-46
             <svg class="contacts__img contacts__img--tel" width="18" height="19">
-              <use xlink:href="img/sprite.svg#tel"></use>
+              <use xlink:href="img/sprite.svg#icon-tel"></use>
             </svg>
           </a>
         </li>
