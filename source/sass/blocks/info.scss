@@ -12,7 +12,6 @@
     flex-direction: column;
     gap: 150px;
     width: 100%;
-    min-height: 320px;
     @include push--auto;
     padding-top: 134px;
     padding-bottom: 70px;
@@ -20,7 +19,6 @@
   }
 
   @media (max-width: $tablet-width) {
-    min-height: 319px;
     gap: 140px;
   }
 }

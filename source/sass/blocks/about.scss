@@ -1,5 +1,11 @@
 .about {
   text-align: center;
+  padding-bottom: 131px;
+  max-width: 1166px;
+
+  @media (max-width: $desktop-width) {
+    padding-bottom: 70px;
+  }
 }
 
 .about__title {
@@ -20,6 +26,8 @@
 .about__item {
   position: relative;
   width: 25%;
+  padding-left: 40px;
+  padding-right: 40px;
 
   @media (max-width: $desktop-width) {
     width: 50%;

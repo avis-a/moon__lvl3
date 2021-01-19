@@ -49,3 +49,10 @@
     left: 21px;
   }
 }
+
+.page__footer {
+  @media (max-width: $tablet-width) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

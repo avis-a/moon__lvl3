@@ -1,5 +1,25 @@
 .contacts {
   text-align: center;
+  padding-top: 249px;
+}
+
+.contacts__title {
+  @include text(30px, 30px, 600);
+  letter-spacing: -0.005em;
+  color: $basic_grey;
+
+  @media (max-width: $desktop-width) {
+    @include text(24px, 30px, 600);
+  }
+
+  @media (max-width: $tablet-width) {
+    @include text(18px, 30px, 600);
+  }
+}
+
+.contacts__text {
+  @include text(17px, 31px, 400);
+  color: $light_black;
 }
 
 .contacts__list {

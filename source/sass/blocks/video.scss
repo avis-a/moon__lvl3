@@ -1,3 +1,51 @@
-.fake {
-  background-color: white;
+.video {
+  text-align: center;
+  padding-top: 120px;
+  background-color: $background_video;
+  position: relative;
+}
+
+.video__title {
+  @include text(30px, 30px, 600);
+  letter-spacing: -0.005em;
+  color: $basic_white;
+}
+
+.video__description {
+  @include text(16px, 28px, 300);
+  letter-spacing: -0.005em;
+  color: $medium_grey;
+}
+
+.video__pic {
+  @include pseudo($display: block, $pos: relative, $content: "");
+  bottom: -98px;
+
+  @media (max-width: $desktop-width) {
+    bottom: -85px;
+  }
+
+  @media (max-width: $tablet-width) {
+    bottom: -49px;
+  }
+}
+
+.video__button {
+  @include pseudo($display: block, $pos: absolute, $content: "");
+  background-color: transparent;
+  border: none;
+  right: 45%;
+  top: 45%;
+}
+
+.video__play {
+  @media (max-width: $desktop-width) {
+    width: 91px;
+    height: 91px;
+  }
+
+  @media (max-width: $tablet-width) {
+    width: 65px;
+    height: 65px;
+  }
 }
