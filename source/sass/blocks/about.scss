@@ -9,7 +9,34 @@
 
 .about__list {
   list-style: none;
+  padding-left: 0;
   display: flex;
   flex-direction: row;
   justify-content: center;
+  flex-wrap: wrap;
+  counter-reset: section;
+}
+
+.about__item {
+  position: relative;
+  width: 25%;
+
+  @media (max-width: $desktop-width) {
+    width: 50%;
+  }
+
+  @media (max-width: $tablet-width) {
+    width: 100%;
+  }
+}
+
+.about__item::before {
+  width: 80px;
+  height: 60px;
+  margin: 0 auto;
+  counter-increment: section;
+  @include text(28px, 38px, 700);
+  @include pseudo($display: block, $pos: relative, $content: "0"counter(section));
+  letter-spacing: -1.28px;
+  color: $basic_color;
 }
