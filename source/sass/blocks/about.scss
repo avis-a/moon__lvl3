@@ -1,3 +1,15 @@
-.fake {
-  background-color: white;
+.about {
+  text-align: center;
+}
+
+.about__title {
+  margin-top: 0;
+  margin-bottom: 50px;
+}
+
+.about__list {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }

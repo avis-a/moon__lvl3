@@ -7,14 +7,45 @@
   background-repeat: no-repeat;
   background-position: center 0;
   background-size: 100% auto;
-  min-height: 825px;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/main-background-desktop-2x.jpg");
   }
+
+  @media (max-width: $desktop-width) {
+    background-image: url("../img/main-background-tablet.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/main-background-tablet-2x.jpg");
+    }
+  }
+
+  @media (max-width: $tablet-width) {
+    background-image: url("../img/main-background-mobile.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/main-background-mobile-2x.jpg");
+    }
+  }
 }
 
 .page__header {
-  min-height: 62px;
   width: 880px;
+
+  @media (max-width: $desktop-width) {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.page__logo {
+  position: absolute;
+  top: 318px;
+
+  @media (max-width: $desktop-width) {
+    position: relative;
+    top: 25px;
+    left: 21px;
+  }
 }

@@ -4,17 +4,57 @@
   grid-template-columns: 1fr 1fr;
   gap: 160px;
   padding-top: 250px;
-  padding-bottom: 390px;
-  width: 880px;
+  padding-bottom: 350px;
+  width: 890px;
+
+  @media (max-width: $desktop-width) {
+    display: flex;
+    flex-direction: column;
+    gap: 150px;
+    width: 100%;
+    min-height: 320px;
+    @include push--auto;
+    padding-top: 134px;
+    padding-bottom: 70px;
+    text-align: center;
+  }
+
+  @media (max-width: $tablet-width) {
+    min-height: 319px;
+    gap: 140px;
+  }
+}
+
+.info__wrapper {
+  width: 380px;
+
+  @media (max-width: $desktop-width) {
+    width: 100%;
+  }
 }
 
 .info__header {
   @include text(46px, 64px, 700);
   letter-spacing: -0.005em;
+
+  @media (max-width: $desktop-width) {
+    @include text(30px, 42px, 700);
+  }
 }
 
 .info__slogan {
   @include text(20px, 32px, 300);
   letter-spacing: -0.005em;
   color: $light_grey;
+
+  @media (max-width: $desktop-width) {
+    @include text(18px, 32px, 300);
+    padding-left: 160px;
+    padding-right: 160px;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }

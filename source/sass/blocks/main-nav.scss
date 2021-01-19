@@ -1,3 +1,74 @@
-// .main-nav__wrapper {
-//   width: 880px;
-// }
+.main-nav__toggle {
+  display: none;
+
+  @media (max-width: $desktop-width) {
+    @include pseudo($display: block, $pos: absolute, $content: '');
+    display: block;
+    z-index: 2;
+    height: 50px;
+    width: 50px;
+    background-color: $basic_color;
+    cursor: pointer;
+    border: none;
+    top: 0;
+    right: 0;
+  }
+}
+
+.main-nav__closed .main-nav__toggle {
+  @media (max-width: $desktop-width) {
+    &::before {
+      @include pseudo($display: block, $pos: absolute, $content: '');
+      top: 18.5px;
+      right: 13.75px;
+      width: 22.5px;
+      height: 1px;
+      background-color: $basic_black;
+      box-shadow: 0 5px 0 0 $basic_black, 0 10px 0 0 $basic_black;
+    }
+  }
+}
+
+.main-nav__opened .main-nav__toggle {
+  @media (max-width: $desktop-width) {
+    width: 22px;
+    height: 22.72px;
+    top: 23px;
+    right: 14px;
+    z-index: 4;
+    background-color: transparent;
+
+    &::before,
+    &::after {
+      @include pseudo($display: block, $pos: absolute, $content: '');
+      top: 0;
+      right: 0;
+      width: 22.75px;
+      height: 1px;
+      background-color: $close_button;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.main-nav__closed .main-nav__wrapper {
+  @media (max-width: $desktop-width) {
+    position: absolute;
+    top: -500px;
+  }
+
+  .main-nav__closed .site-list__item {
+    display: none;
+  }
+
+  .main-nav__nojs .main-nav__toggle {
+    display: none;
+  }
+}

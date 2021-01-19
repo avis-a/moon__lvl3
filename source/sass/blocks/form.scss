@@ -1,12 +1,35 @@
+.form {
+  @media (max-width: $desktop-width) {
+    padding-left: 200px;
+    padding-right: 200px;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
 .form__text {
   @include text(17px, 28px, 600);
   letter-spacing: -0.005em;
   text-align: center;
+  margin-top: 0;
+  margin-bottom: 20px;
+  width: 327px;
+
+  @media (max-width: $desktop-width) {
+    @include text(18px, 28px, 600);
+    color: $basic_black;
+    width: 100%;
+  }
 }
 
 .form__row {
   @include text(15px, 24px, 400);
   color: $form_text;
+  margin-top: 0;
+  margin-bottom: 20px
 }
 
 .form__control {
@@ -16,6 +39,10 @@
   padding-left: 30px;
   border: 1px solid $border_color;
   border-radius: 6px;
+
+  @media (max-width: $desktop-width) {
+    width: 100%;
+  }
 }
 
 .form__button {
@@ -26,4 +53,8 @@
   background: $basic_color;
   border-radius: 6px;
   border: none;
+
+  @media (max-width: $desktop-width) {
+    width: 100%;
+  }
 }
