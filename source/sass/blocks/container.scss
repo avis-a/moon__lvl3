@@ -3,11 +3,11 @@
   max-width: 1024px;
 
   @media (max-width: $desktop-width) {
-    padding: 0 20px;
+    padding: 0 35px;
   }
 
   @media (max-width: $tablet-width) {
-    min-width: 320px;
+    min-width: 288px;
     padding: 0 16px;
   }
 }

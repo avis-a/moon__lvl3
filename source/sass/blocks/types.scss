@@ -2,20 +2,20 @@
   text-align: center;
   background-color: $background_color;
   padding-top: 149px;
-  padding-bottom: 147px;
+  padding-bottom: 167px;
 
   @media (max-width: $desktop-width) {
     padding-top: 50px;
-    padding-bottom: 70px;
+    padding-bottom: 20px;
   }
 
   @media (max-width: $tablet-width) {
-    padding-bottom: 50px;
+    padding-bottom: 12px;
   }
 }
 
 .types_wrapper {
-  max-width: 1166px;
+  max-width: 1128px;
 }
 
 .types__title {
@@ -23,10 +23,11 @@
   letter-spacing: -0.005em;
   color: $basic_grey;
   margin-top: 0;
-  margin-bottom: 50px;
+  margin-bottom: 51px;
 
   @media (max-width: $desktop-width) {
     @include text(24px, 41px, 600);
+    margin-bottom: 31px;
   }
 }
 
@@ -40,6 +41,10 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 5%;
+
+  @media (max-width: $desktop-width) {
+    gap: 7%;
+  }
 }
 
 .types__item {
@@ -50,17 +55,22 @@
   z-index: 1;
 
   @media (max-width: $desktop-width) {
-    width: 300px;
+    width: 270px;
   }
+}
 
-  @media (max-width: $tablet-width) {
-    width: 100%;
+.types__item--road {
+  position: relative;
+  top: 10px;
+
+  @media (max-width: $desktop-width) {
+    top: unset;
   }
 }
 
 .types__item--mountain {
   position: relative;
-  top: 25px;
+  top: 40px;
 
   @media (max-width: $desktop-width) {
     top: unset;
@@ -75,8 +85,8 @@
 .types__item--road::before {
   width: 180px;
   height: 180px;
-  bottom: 300px;
-  left: -60px;
+  bottom: 305px;
+  left: -59px;
   z-index: -1;
   border: 27px solid $basic_color;
   border-radius: 50%;
@@ -84,13 +94,14 @@
   @media (max-width: $desktop-width) {
     width: 127px;
     height: 127px;
-    bottom: 50px;
-    left: -37px;
+    bottom: 76px;
+    left: -38px;
     border: 18px solid $basic_color;
   }
 
   @media (max-width: $tablet-width) {
-    left: -24px;
+    bottom: 68px;
+    left: -25px;
   }
 }
 
@@ -98,7 +109,7 @@
   width: 95px;
   height: 95px;
   top: -5%;
-  right: -30px;
+  right: -35px;
   z-index: 0;
   border: 17px solid $basic_color;
   border-radius: 50%;
@@ -132,8 +143,8 @@
 }
 
 .types__item--mountain::after {
-  bottom: 56px;
-  right: -23px;
+  bottom: 53px;
+  right: -25px;
 }
 
 .types__text {
@@ -141,11 +152,20 @@
   letter-spacing: -0.5px;
   order: 2;
   color: $basic_black;
+
+  @media (max-width: $desktop-width) {
+    margin-top: 18px;
+    margin-bottom: 49px;
+  }
+
+  @media (max-width: $tablet-width) {
+    margin-top: 19px;
+    margin-bottom: 40px;
+  }
 }
 
 .types__img {
   width: 100%;
   border-radius: 10px;
   object-fit: cover;
-  z-index: -5;
 }

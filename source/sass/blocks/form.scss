@@ -1,12 +1,10 @@
 .form {
   @media (max-width: $desktop-width) {
-    padding-left: 200px;
-    padding-right: 200px;
+    @include push--auto;
   }
 
   @media (max-width: $tablet-width) {
-    padding-left: 0;
-    padding-right: 0;
+    margin: unset;
   }
 }
 
@@ -21,7 +19,12 @@
   @media (max-width: $desktop-width) {
     @include text(18px, 28px, 600);
     color: $basic_black;
+    margin-bottom: 30px;
     width: 100%;
+  }
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 20px;
   }
 }
 
@@ -42,6 +45,7 @@
 
   @media (max-width: $desktop-width) {
     width: 100%;
+    padding-left: 24px;
   }
 }
 

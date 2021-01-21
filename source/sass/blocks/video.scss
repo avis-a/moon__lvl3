@@ -3,13 +3,16 @@
   padding-top: 120px;
   background-color: $background_video;
   position: relative;
+  height: 706px;
 
   @media (max-width: $desktop-width) {
     padding-top: 70px;
+    height: 413px;
   }
 
   @media (max-width: $tablet-width) {
     padding-top: 84px;
+    height: 384px;
   }
 }
 
@@ -45,14 +48,14 @@
 
 .video__pic {
   @include pseudo($display: block, $pos: relative, $content: "");
-  bottom: -98px;
+  bottom: -56px;
 
   @media (max-width: $desktop-width) {
-    bottom: -85px;
+    bottom: -40px;
   }
 
   @media (max-width: $tablet-width) {
-    bottom: -49px;
+    bottom: -53px;
   }
 }
 
@@ -60,8 +63,18 @@
   @include pseudo($display: block, $pos: absolute, $content: "");
   background-color: transparent;
   border: none;
-  right: 45%;
-  top: 45%;
+  right: 46%;
+  top: 43%;
+
+  @media (max-width: $desktop-width) {
+    right: 43%;
+    top: 33%;
+  }
+
+  @media (max-width: $tablet-width) {
+    right: 37%;
+    top: 29%;
+  }
 }
 
 .video__play {

@@ -1,13 +1,13 @@
 .contacts {
   text-align: center;
-  padding-top: 249px;
+  padding-top: 225px;
 
   @media (max-width: $desktop-width) {
-    padding-top: 155px;
+    padding-top: 135px;
   }
 
   @media (max-width: $tablet-width) {
-    padding-top: 119px;
+    padding-top: 104px;
   }
 }
 
@@ -15,9 +15,11 @@
   @include text(30px, 30px, 600);
   letter-spacing: -0.005em;
   color: $basic_grey;
+  margin-bottom: 30px;
 
   @media (max-width: $desktop-width) {
     @include text(24px, 30px, 600);
+    margin-bottom: 20px;
   }
 
   @media (max-width: $tablet-width) {
@@ -30,9 +32,17 @@
   color: $light_black;
   width: 555px;
   @include push--auto;
+  margin-top: 0;
+  margin-bottom: 39px;
 
   @media (max-width: $desktop-width) {
     width: 100%;
+    margin-bottom: 20px;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding-left: 31px;
+    padding-right: 30px;
   }
 }
 
@@ -42,20 +52,22 @@
   padding-left: 0;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  gap: 90px;
+  padding-left: 196px;
   padding-top: 39px;
   padding-bottom: 98px;
 
   @media (max-width: $desktop-width) {
     padding-top: 20px;
     padding-bottom: 53px;
+    padding-left: 69px;
   }
 
   @media (max-width: $tablet-width) {
     flex-direction: column;
     padding-top: 31px;
     padding-bottom: 51px;
+    padding-left: 16px;
+    padding-right: 16px;
     gap: 23px;
   }
 }
@@ -64,7 +76,15 @@
   @include text(16px, 22px, 400);
   color: $medium_black;
   text-decoration: none;
-  padding-left: 15px;
+  padding-left: 12px;
+}
+
+.contacts__item--tel {
+  padding-left: 90px;
+
+  @media (max-width: $tablet-width) {
+    padding-left: 0;
+  }
 }
 
 .contacts__img {
