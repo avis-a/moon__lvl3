@@ -3,18 +3,44 @@
   padding-top: 120px;
   background-color: $background_video;
   position: relative;
+
+  @media (max-width: $desktop-width) {
+    padding-top: 70px;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding-top: 84px;
+  }
 }
 
 .video__title {
   @include text(30px, 30px, 600);
   letter-spacing: -0.005em;
   color: $basic_white;
+  margin-top: 0;
+  margin-bottom: 20px;
+
+  @media (max-width: $desktop-width) {
+    @include text(24px, 30px, 600);
+  }
 }
 
 .video__description {
   @include text(16px, 28px, 300);
   letter-spacing: -0.005em;
   color: $medium_grey;
+  width: 340px;
+  @include push--auto;
+  margin-top: 0;
+  margin-bottom: 0;
+
+  @media (max-width: $desktop-width) {
+    width: 429px;
+  }
+
+  @media (max-width: $tablet-width) {
+    width: 100%;
+  }
 }
 
 .video__pic {

@@ -1,6 +1,14 @@
 .contacts {
   text-align: center;
   padding-top: 249px;
+
+  @media (max-width: $desktop-width) {
+    padding-top: 155px;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding-top: 119px;
+  }
 }
 
 .contacts__title {
@@ -20,6 +28,12 @@
 .contacts__text {
   @include text(17px, 31px, 400);
   color: $light_black;
+  width: 555px;
+  @include push--auto;
+
+  @media (max-width: $desktop-width) {
+    width: 100%;
+  }
 }
 
 .contacts__list {

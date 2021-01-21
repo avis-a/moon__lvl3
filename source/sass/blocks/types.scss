@@ -3,6 +3,19 @@
   background-color: $background_color;
   padding-top: 149px;
   padding-bottom: 147px;
+
+  @media (max-width: $desktop-width) {
+    padding-top: 50px;
+    padding-bottom: 70px;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding-bottom: 50px;
+  }
+}
+
+.types_wrapper {
+  max-width: 1166px;
 }
 
 .types__title {
@@ -25,12 +38,102 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 50px;
+  justify-content: center;
+  gap: 5%;
 }
 
 .types__item {
   display: flex;
   flex-direction: column;
+  width: 30%;
+  position: relative;
+  z-index: 1;
+
+  @media (max-width: $desktop-width) {
+    width: 300px;
+  }
+
+  @media (max-width: $tablet-width) {
+    width: 100%;
+  }
+}
+
+.types__item--mountain {
+  position: relative;
+  top: 25px;
+
+  @media (max-width: $desktop-width) {
+    top: unset;
+  }
+}
+
+.types__item::before,
+.types__item::after {
+  @include pseudo($display: block, $pos: absolute, $content: "");
+}
+
+.types__item--road::before {
+  width: 180px;
+  height: 180px;
+  bottom: 300px;
+  left: -60px;
+  z-index: -1;
+  border: 27px solid $basic_color;
+  border-radius: 50%;
+
+  @media (max-width: $desktop-width) {
+    width: 127px;
+    height: 127px;
+    bottom: 50px;
+    left: -37px;
+    border: 18px solid $basic_color;
+  }
+
+  @media (max-width: $tablet-width) {
+    left: -24px;
+  }
+}
+
+.types__item--child::before {
+  width: 95px;
+  height: 95px;
+  top: -5%;
+  right: -30px;
+  z-index: 0;
+  border: 17px solid $basic_color;
+  border-radius: 50%;
+
+  @media (max-width: $desktop-width) {
+    width: 68px;
+    height: 68px;
+    border: 13px solid $basic_color;
+    right: -25px;
+  }
+
+  @media (max-width: $tablet-width) {
+    right: -15px;
+  }
+}
+
+.types__item--mountain::before,
+.types__item--mountain::after {
+  width: 47px;
+  height: 47px;
+  border: 8px solid $basic_color;
+
+  @media (max-width: $desktop-width) {
+    border: none;
+  }
+}
+
+.types__item--mountain::before {
+  top: -18px;
+  left: -20px;
+}
+
+.types__item--mountain::after {
+  bottom: 56px;
+  right: -23px;
 }
 
 .types__text {
@@ -41,5 +144,8 @@
 }
 
 .types__img {
-  width: 342px;
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  z-index: -5;
 }
