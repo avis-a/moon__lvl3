@@ -67,11 +67,12 @@
 }
 
 .about__item::before {
+  @include text(28px, 38px, 700);
+  @include pseudo($display: block, $pos: relative, $content: "0"counter(section));
+
   height: 52px;
   margin: 0 auto;
   counter-increment: section;
-  @include text(28px, 38px, 700);
-  @include pseudo($display: block, $pos: relative, $content: "0"counter(section));
   letter-spacing: -1.28px;
   color: $basic_color;
 
@@ -80,7 +81,7 @@
   }
 }
 
-.about__item:last-child>p {
+.about__item:last-child > p {
   @media (max-width: $tablet-width) {
     padding-left: 10px;
     padding-right: 10px;

@@ -20,10 +20,10 @@
     @include text(18px, 28px, 600);
     color: $basic_black;
     margin-bottom: 30px;
-    width: 100%;
   }
 
   @media (max-width: $tablet-width) {
+    width: 100%;
     margin-bottom: 20px;
   }
 }
@@ -32,7 +32,7 @@
   @include text(15px, 24px, 400);
   color: $form_text;
   margin-top: 0;
-  margin-bottom: 20px
+  margin-bottom: 20px;
 }
 
 .form__control {
@@ -42,11 +42,26 @@
   padding-left: 30px;
   border: 1px solid $border_color;
   border-radius: 6px;
+  outline: none;
 
   @media (max-width: $desktop-width) {
     width: 100%;
     padding-left: 24px;
   }
+}
+
+.form__control:hover {
+  border: 2px solid $medium_black;
+  cursor: pointer;
+}
+
+.form__control:focus {
+  border: 2px solid $light_black;
+  cursor: pointer;
+}
+
+.form__control:invalid {
+  border: 2px solid red;
 }
 
 .form__button {
@@ -61,4 +76,9 @@
   @media (max-width: $desktop-width) {
     width: 100%;
   }
+}
+
+.form__button:hover {
+  border: 2px solid $basic_black;
+  cursor: pointer;
 }

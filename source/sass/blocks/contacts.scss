@@ -29,9 +29,10 @@
 
 .contacts__text {
   @include text(17px, 31px, 400);
+  @include push--auto;
+
   color: $light_black;
   width: 555px;
-  @include push--auto;
   margin-top: 0;
   margin-bottom: 39px;
 
@@ -49,7 +50,6 @@
 .contacts__list {
   margin: 0;
   list-style: none;
-  padding-left: 0;
   display: flex;
   flex-direction: row;
   padding-left: 196px;
@@ -85,6 +85,10 @@
   @media (max-width: $tablet-width) {
     padding-left: 0;
   }
+}
+
+.contacts__item:hover {
+  opacity: 0.7;
 }
 
 .contacts__img {

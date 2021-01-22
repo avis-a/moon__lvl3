@@ -58,6 +58,10 @@
   }
 }
 
+.main-nav__nojs .main-nav__wrapper {
+  position: relative;
+}
+
 .main-nav__closed .main-nav__wrapper {
   @media (max-width: $desktop-width) {
     position: absolute;

@@ -4,9 +4,6 @@
   color: $basic_black;
   background-color: $basic_white;
   margin: 0;
-}
-
-.page__index {
   // background-color: $basic_grey;
   background-image: url("../img/main-background-desktop.jpg");
   background-repeat: no-repeat;
@@ -57,6 +54,11 @@
   @media (max-width: $tablet-width) {
     left: 17px;
   }
+}
+
+.page__logo:hover {
+  opacity: 0.7;
+  cursor: pointer;
 }
 
 .page__footer {

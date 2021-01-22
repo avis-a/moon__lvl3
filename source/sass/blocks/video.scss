@@ -30,10 +30,11 @@
 
 .video__description {
   @include text(16px, 28px, 300);
+  @include push--auto;
+
   letter-spacing: -0.005em;
   color: $medium_grey;
   width: 340px;
-  @include push--auto;
   margin-top: 0;
   margin-bottom: 0;
 
@@ -75,6 +76,11 @@
     right: 37%;
     top: 29%;
   }
+}
+
+.video__button:hover {
+  opacity: 0.7;
+  cursor: pointer;
 }
 
 .video__play {

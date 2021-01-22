@@ -42,20 +42,20 @@
   }
 }
 
+.site-list__item:hover {
+  opacity: 0.7;
+}
+
 .main-nav__opened .site-list__item {
   @media (max-width: $desktop-width) {
-
     &::after {
-      @include pseudo($display: inline-block, $pos: relative, $content: '');
+      @include pseudo($display: inline-block, $pos: relative, $content: "");
       top: 10px;
       right: 24.6px;
       width: 7.4px;
       height: 7.4px;
       border-top: 1px solid $arrow_color;
       border-right: 1px solid $arrow_color;
-    }
-
-    &::after {
       transform: rotate(45deg);
     }
   }
