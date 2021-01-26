@@ -5,6 +5,7 @@
   var navMain = document.querySelector('.main-nav');
   var navToggle = document.querySelector('.main-nav__toggle');
   var searchForm = document.querySelector('.form');
+  var page = document.querySelector('.page');
 
   if (navMain && navToggle) {
     navMain.classList.remove('main-nav__opened');
@@ -15,9 +16,11 @@
       if (navMain.classList.contains('main-nav__closed')) {
         navMain.classList.remove('main-nav__closed');
         navMain.classList.add('main-nav__opened');
+        page.classList.add('page__hidden');
       } else {
         navMain.classList.add('main-nav__closed');
         navMain.classList.remove('main-nav__opened');
+        page.classList.remove('page__hidden');
       }
     });
   }

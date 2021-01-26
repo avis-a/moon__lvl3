@@ -31,18 +31,14 @@
 
 .main-nav__opened .main-nav__toggle {
   @media (max-width: $desktop-width) {
-    width: 22px;
-    height: 22.72px;
-    top: 23px;
-    right: 14px;
     z-index: 4;
     background-color: transparent;
 
     &::before,
     &::after {
       @include pseudo($display: block, $pos: absolute, $content: "");
-      top: 0;
-      right: 0;
+      top: 23px;
+      right: 14px;
       width: 22.75px;
       height: 1px;
       background-color: $close_button;

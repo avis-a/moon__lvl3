@@ -14,7 +14,9 @@
 
 .main-nav__opened .site-list {
   @media (max-width: $desktop-width) {
-    @include pseudo($display: block, $pos: relative, $content: "");
+    @include pseudo($display: block, $pos: absolute, $content: "");
+    height: 100%;
+    width: 100%;
     top: -24px;
     border: none;
     background-color: $basic_white;
