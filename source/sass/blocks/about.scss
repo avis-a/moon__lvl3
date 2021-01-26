@@ -53,12 +53,14 @@
   width: 25%;
   padding-left: 35px;
   padding-right: 35px;
+  margin-bottom: 50px;
 
   @media (max-width: $desktop-width) {
     width: 250px;
     padding-left: 0;
     padding-right: 0;
     text-align: center;
+    margin-bottom: unset;
   }
 
   @media (max-width: $tablet-width) {
