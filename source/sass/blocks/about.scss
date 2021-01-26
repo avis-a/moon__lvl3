@@ -12,7 +12,7 @@
   }
 }
 
-.about__title {
+.about > h2 {
   @include text(30px, 30px, 600);
   letter-spacing: -0.005em;
   color: $basic_grey;
@@ -88,7 +88,7 @@
   }
 }
 
-.about__text {
+.about__item > p {
   @include text(22px, 34px, 400);
   letter-spacing: -0.5px;
   margin-top: 0;

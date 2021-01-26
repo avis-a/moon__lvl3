@@ -8,7 +8,7 @@
   }
 }
 
-.form__text {
+.form > p {
   @include text(17px, 28px, 600);
   letter-spacing: -0.005em;
   text-align: center;
@@ -28,14 +28,14 @@
   }
 }
 
-.form__row {
+.form__wrapper > div {
   @include text(15px, 24px, 400);
   color: $form_text;
   margin-top: 0;
   margin-bottom: 20px;
 }
 
-.form__control {
+.form__row > input {
   min-height: 48px;
   width: 327px;
   padding-top: 3px;
@@ -50,17 +50,17 @@
   }
 }
 
-.form__control:hover {
+.form__row > input:hover {
   border: 2px solid $medium_black;
   cursor: pointer;
 }
 
-.form__control:focus {
+.form__row > input:focus {
   border: 2px solid $light_black;
   cursor: pointer;
 }
 
-.form__control:invalid {
+.form__row > input:invalid {
   border: 2px solid red;
 }
 

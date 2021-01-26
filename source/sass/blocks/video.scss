@@ -16,7 +16,7 @@
   }
 }
 
-.video__title {
+.video__info > h2 {
   @include text(30px, 30px, 600);
   letter-spacing: -0.005em;
   color: $basic_white;
@@ -28,7 +28,7 @@
   }
 }
 
-.video__description {
+.video__info > p {
   @include text(16px, 28px, 300);
   @include push--auto;
 

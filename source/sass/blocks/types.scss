@@ -22,7 +22,7 @@
   max-width: 1128px;
 }
 
-.types__title {
+.types__wrapper > h2 {
   @include text(30px, 30px, 600);
   letter-spacing: -0.005em;
   color: $basic_grey;
@@ -151,7 +151,7 @@
   right: -25px;
 }
 
-.types__text {
+.types__item > p {
   @include text(22px, 34px, 600);
   letter-spacing: -0.5px;
   order: 2;
@@ -168,8 +168,13 @@
   }
 }
 
-.types__img {
+.types__item > img {
   width: 100%;
   border-radius: 10px;
   object-fit: cover;
+
+  @media (max-width: $desktop-width) {
+    width: 270px;
+    height: 300px;
+  }
 }
