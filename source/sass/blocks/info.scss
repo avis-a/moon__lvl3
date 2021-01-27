@@ -1,26 +1,48 @@
 .info {
   color: $basic_white;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 170px;
-  padding-top: 260px;
-  padding-bottom: 370px;
-  width: 878px;
+  padding-top: 323px;
+  padding-bottom: 240px;
+  margin-top: -63px;
+  // background-color: $basic_grey;
+  background-image: url("../img/main-background-desktop.jpg");
+  background-repeat: no-repeat;
+  background-position: center 0;
+  background-size: 100% auto;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/main-background-desktop-2x.jpg");
+  }
 
   @media (max-width: $desktop-width) {
-    @include push--auto;
-
-    display: flex;
-    flex-direction: column;
-    gap: 132px;
-    width: 100%;
-    padding-top: 64px;
-    padding-bottom: 70px;
+    padding-top: unset;
+    margin-top: -24px;
     text-align: center;
+    background-image: unset;
+    padding-bottom: 0;
   }
 
   @media (max-width: $tablet-width) {
-    gap: 122px;
+    padding-bottom: 70px;
+  }
+}
+
+.info__container {
+  width: 878px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 170px;
+
+  @media (max-width: $desktop-width) {
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  @media (max-width: $tablet-width) {
+    gap: 52px;
   }
 }
 
@@ -29,6 +51,29 @@
 
   @media (max-width: $desktop-width) {
     width: 100%;
+    min-height: 340px;
+    padding-top: 88px;
+    padding-bottom: 61px;
+    background-image: url("../img/main-background-tablet.jpg");
+    background-repeat: no-repeat;
+    background-position: center 0;
+    background-size: 100% auto;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/main-background-tablet-2x.jpg");
+    }
+  }
+
+  @media (max-width: $tablet-width) {
+    padding-top: 120px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 70px;
+    background-image: url("../img/main-background-mobile.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/main-background-mobile-2x.jpg");
+    }
   }
 }
 
@@ -44,7 +89,7 @@
   }
 
   @media (max-width: $tablet-width) {
-    margin-top: 33px;
+    margin-top: 0;
   }
 }
 

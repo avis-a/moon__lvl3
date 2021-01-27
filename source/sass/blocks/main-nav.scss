@@ -54,7 +54,7 @@
   }
 }
 
-.main-nav__nojs .main-nav__wrapper {
+.main-nav__nojs .site-list {
   position: relative;
 }
 
@@ -63,12 +63,16 @@
     position: absolute;
     top: -500px;
   }
+}
 
-  .main-nav__closed .site-list__item {
+.main-nav__closed .site-list__item {
+  @media (max-width: $desktop-width) {
     display: none;
   }
+}
 
-  .main-nav__nojs .main-nav__toggle {
+.main-nav__nojs .main-nav__toggle {
+  @media (max-width: $desktop-width) {
     display: none;
   }
 }

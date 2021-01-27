@@ -2,7 +2,7 @@
   text-align: center;
   background-color: $background_color;
   padding-top: 149px;
-  padding-bottom: 167px;
+  padding-bottom: 116px;
   padding-left: 40px;
   padding-right: 40px;
 
@@ -18,7 +18,7 @@
   }
 }
 
-.types_wrapper {
+.types__wrapper {
   max-width: 1128px;
 }
 
@@ -31,7 +31,12 @@
 
   @media (max-width: $desktop-width) {
     @include text(24px, 41px, 600);
-    margin-bottom: 31px;
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: $tablet-width) {
+    margin-top: 10px;
+    margin-bottom: 29px;
   }
 }
 
@@ -79,7 +84,7 @@
 
   @media (max-width: $desktop-width) {
     top: unset;
-    margin-top: unset;
+    margin-bottom: unset;
   }
 }
 
@@ -91,7 +96,7 @@
 .types__item--road::before {
   width: 180px;
   height: 180px;
-  bottom: 305px;
+  bottom: 356px;
   left: -59px;
   z-index: -1;
   border: 27px solid $basic_color;

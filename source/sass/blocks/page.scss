@@ -4,31 +4,6 @@
   color: $basic_black;
   background-color: $basic_white;
   margin: 0;
-  // background-color: $basic_grey;
-  background-image: url("../img/main-background-desktop.jpg");
-  background-repeat: no-repeat;
-  background-position: center 0;
-  background-size: 100% auto;
-
-  @media (min-resolution: 2dppx) {
-    background-image: url("../img/main-background-desktop-2x.jpg");
-  }
-
-  @media (max-width: $desktop-width) {
-    background-image: url("../img/main-background-tablet.jpg");
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../img/main-background-tablet-2x.jpg");
-    }
-  }
-
-  @media (max-width: $tablet-width) {
-    background-image: url("../img/main-background-mobile.jpg");
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../img/main-background-mobile-2x.jpg");
-    }
-  }
 }
 
 .page__hidden {

@@ -1,14 +1,17 @@
 .about {
   text-align: center;
-  padding-bottom: 136px;
+  padding-bottom: 87px;
+  margin-top: 130px;
   max-width: 1210px;
 
   @media (max-width: $desktop-width) {
     padding-bottom: 50px;
+    margin-top: 70px;
   }
 
   @media (max-width: $tablet-width) {
-    padding-bottom: 57px;
+    padding-bottom: 50px;
+    margin-top: 0;
   }
 }
 

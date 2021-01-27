@@ -49,14 +49,19 @@
 
 .video__pic {
   @include pseudo($display: block, $pos: relative, $content: "");
+  @include push--auto;
   bottom: -56px;
 
   @media (max-width: $desktop-width) {
     bottom: -40px;
+    width: 503px;
+    height: 282px;
   }
 
   @media (max-width: $tablet-width) {
     bottom: -53px;
+    width: 288px;
+    height: 162px;
   }
 }
 
@@ -68,8 +73,8 @@
   top: 43%;
 
   @media (max-width: $desktop-width) {
-    right: 43%;
-    top: 33%;
+    right: 40%;
+    top: 34%;
   }
 
   @media (max-width: $tablet-width) {
