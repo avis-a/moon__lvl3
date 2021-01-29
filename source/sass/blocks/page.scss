@@ -12,6 +12,7 @@
 
 .page__header {
   width: 880px;
+  position: relative;
 
   @media (max-width: $desktop-width) {
     width: 100%;
