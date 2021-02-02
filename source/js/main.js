@@ -5,6 +5,7 @@
   var navMain = document.querySelector('.main-nav');
   var navToggle = document.querySelector('.main-nav__toggle');
   var searchForm = document.querySelector('.form');
+  var submitBuuton = document.querySelector('.form__button');
 
   if (navMain && navToggle) {
     navMain.classList.remove('main-nav__opened');
@@ -24,24 +25,36 @@
 
 
   if (searchForm) {
-    searchForm.addEventListener('submit', function (evt) {
+    submitBuuton.addEventListener('click', function (evt) {
+
       var isValidateSuccess = true;
 
       // получаем поля формы
       var name = document.getElementById('name');
       var tel = document.getElementById('tel');
 
-      if (name.value === '') {
-        name.required = true;
+      name.setCustomValidity(``);
+      tel.setCustomValidity(``);
+
+      if (!name.value) {
         isValidateSuccess = false;
+        name.setCustomValidity(`Имя не может быть пустым.`);
       }
 
-      if (tel.value === '') {
-        tel.required = true;
+      let regexResult = tel.value.match(/(\+?\d[- .]*){7,13}/i);
+
+      if (!tel.value) {
         isValidateSuccess = false;
+        tel.setCustomValidity(`Телефон не может быть пустым.`);
+      } else if (regexResult == null || regexResult.length <= 0) {
+        isValidateSuccess = false;
+        tel.setCustomValidity(`Значение поля "Телефон" не удовлетворяет шаблону!`);
       }
 
       if (isValidateSuccess !== true) {
+        name.reportValidity();
+        tel.reportValidity();
+
         evt.preventDefault();
       }
     });

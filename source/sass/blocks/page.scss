@@ -18,10 +18,10 @@
 }
 
 .page__logo {
-  position: absolute;
-  top: 318px;
+  display: none;
 
   @media (max-width: $desktop-width) {
+    display: block;
     position: relative;
     top: 25px;
     left: 21px;
