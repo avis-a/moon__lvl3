@@ -11,6 +11,11 @@
   }
 }
 
+.contacts__item {
+  padding-bottom: 10px;
+  padding-right: 10px;
+}
+
 .contacts > h2 {
   @include text(30px, 30px, 600);
   letter-spacing: -0.005em;
