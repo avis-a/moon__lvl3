@@ -6,6 +6,7 @@
   var navToggle = document.querySelector('.main-nav__toggle');
   var searchForm = document.querySelector('.form');
   var submitBuuton = document.querySelector('.form__button');
+  var mainPage = document.querySelector('.page__main');
 
   if (navMain && navToggle) {
     navMain.classList.remove('main-nav__opened');
@@ -16,9 +17,11 @@
       if (navMain.classList.contains('main-nav__closed')) {
         navMain.classList.remove('main-nav__closed');
         navMain.classList.add('main-nav__opened');
+        mainPage.classList.add('page__hidden');
       } else {
         navMain.classList.add('main-nav__closed');
         navMain.classList.remove('main-nav__opened');
+        mainPage.classList.remove('page__hidden');
       }
     });
   }

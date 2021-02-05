@@ -15,7 +15,7 @@
 .main-nav__opened .site-list {
   @media (max-width: $desktop-width) {
     @include pseudo($display: block, $pos: absolute, $content: "");
-    height: 105vh;
+    min-height: 105vh;
     width: 100%;
     top: -24px;
     border: none;
@@ -26,6 +26,12 @@
     padding-top: 100px;
     padding-bottom: 100px;
     z-index: 3;
+  }
+}
+
+.main-nav__nojs .site-list {
+  @media (max-width: $desktop-width) {
+    min-height: 100%;
   }
 }
 
