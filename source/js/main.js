@@ -36,22 +36,22 @@
       var name = document.getElementById('name');
       var tel = document.getElementById('tel');
 
-      name.setCustomValidity(``);
-      tel.setCustomValidity(``);
+      name.setCustomValidity('');
+      tel.setCustomValidity('');
 
       if (!name.value) {
         isValidateSuccess = false;
-        name.setCustomValidity(`Имя не может быть пустым.`);
+        name.setCustomValidity('Имя не может быть пустым.');
       }
 
-      let regexResult = tel.value.match(/(\+?\d[- .]*){7,13}/i);
+      var regexResult = tel.value.match(/(\+?\d[- .]*){7,13}/i);
 
       if (!tel.value) {
         isValidateSuccess = false;
-        tel.setCustomValidity(`Телефон не может быть пустым.`);
-      } else if (regexResult == null || regexResult.length <= 0) {
+        tel.setCustomValidity('Телефон не может быть пустым.');
+      } else if (regexResult === null || regexResult.length <= 0) {
         isValidateSuccess = false;
-        tel.setCustomValidity(`Значение поля "Телефон" не удовлетворяет шаблону!`);
+        tel.setCustomValidity('Значение поля "Телефон" не удовлетворяет шаблону!');
       }
 
       if (isValidateSuccess !== true) {
